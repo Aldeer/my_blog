@@ -12,3 +12,8 @@ def publicaciones(request):
         'publicaciones':publicaciones
     }
     return render(request, 'publicaciones.html', context=context)
+
+def publicacion(request, titulo):
+    publicacion = Publicacion.objects.get(titulo=titulo)
+    print(titulo)
+    return render(request, 'publicacion.html', {'publicacion':publicacion})

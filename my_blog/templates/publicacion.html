@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    {{ publicacion.titulo }}
+{% endblock titulo %}
+    
+
+
+{% block content %}
+    <div>
+        <h1>{{ publicacion.titulo }}</h1>
+        {{ publicacion.contenido | safe }}
+
+    </div>
+{% endblock content %}
+    

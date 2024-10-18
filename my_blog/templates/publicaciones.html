@@ -13,11 +13,14 @@
         
         {% for publicacion in publicaciones %}
             <div class="card">
-                <h2 class="titulo">{{ publicacion.titulo }}</h2>
-                <img src="{{ publicacion.portada }}" alt="">
+                <h2 class="titulo">
+                    <a href="{% url 'publicaciones:publicacion' publicacion.titulo %}">{{ publicacion.titulo }}</a>
+                </h2>
             </div>
             <hr>
         {% endfor %}
+
+
             
         
     {% else %}
