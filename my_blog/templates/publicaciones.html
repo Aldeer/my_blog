@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+
+{% block titulo %}
+    Publicaciones
+{% endblock titulo %}
+
+
+{% block content %}
+    
+    
+    {% if publicaciones %}
+        
+        {% for publicacion in publicaciones %}
+            <div class="card">
+                <h2 class="titulo">{{ publicacion.titulo }}</h2>
+                <img src="{{ publicacion.portada }}" alt="">
+            </div>
+            <hr>
+        {% endfor %}
+            
+        
+    {% else %}
+        <h2>No exiten publicaciones</h2>
+    {% endif %}
+        
+        
+{% endblock content %}
+    
