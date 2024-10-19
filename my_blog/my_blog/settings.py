@@ -29,10 +29,13 @@ INSTALLED_APPS = [
     
     # dependencias
     'ckeditor',
+    'bootstrap5',
 
     # aplicaciones
     'aplicaciones.comentarios',
     'aplicaciones.publicaciones',
+
+
 
 ]
 

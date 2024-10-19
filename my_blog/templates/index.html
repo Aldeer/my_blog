@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 
 <html lang="en">
 <head>
@@ -22,10 +25,30 @@
         </ul>
     </nav>
 
-    
-    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 search">
+                <form method="get">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" name="buscar" class="form-control" placeholder="Buscar...">
+                            <span class="input-group-list">
+                                <i class="icon icon-search"></i>
+                                <button type="submit" class="btn btn-success">Buscar</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
         
-    {% endblock content %}
+        {% endblock content %}
+    </div>
+    
         
 </body>
 </html>
