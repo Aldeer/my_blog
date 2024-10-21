@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    {% block titulo %}
+        Home
+    {% endblock titulo %}
+    </title>
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+    
+    <div class="container">
+      {% block content %}
+        
+      {% endblock content %}
+    </div>
+    
+        
+</body>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+</html>
